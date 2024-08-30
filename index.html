@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMod Loading Screen</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+        }
+
+        /* Title Styling */
+        .title {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #8e44ad, #3498db); /* Purple to Blue gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styling */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .button {
+            text-decoration: none;
+            background-color: #1f1f1f; /* Dark button background */
+            color: #ffffff; /* White text */
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #333333; /* Slightly lighter on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">GMod Loading Screen</h1>
+        <div class="buttons">
+            <a href="https://yourfirstlink.com" class="button">First Link</a>
+            <a href="https://yoursecondlink.com" class="button">Second Link</a>
+            <a href="https://yourthirdlink.com" class="button">Third Link</a>
+        </div>
+    </div>
+</body>
+</html>
