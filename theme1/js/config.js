@@ -5,17 +5,17 @@ var Config = {};
  * What should the text in the center of the screen be?
  * if empty it will fill in your Server Name
  */
-Config.title = "Connecting To ElysianRP";
+Config.title = "Welcome To The Server";
 
 /**
  * Enable map text in the top left corner of the screen?
  */
-Config.enableMap = false;
+Config.enableMap = true;
 
 /**
  * Enable steamId text in the top right corner of the screen?
  */
-Config.enableSteamID = false;
+Config.enableSteamID = true;
 
 /**
  * Enable announcements?
@@ -27,8 +27,7 @@ Config.enableAnnouncements = true;
  * only works if enableAnnouncements = true
  */
 Config.announceMessages = [
-  "Do you need free discord bot hosting?",
-  "If you need goto https://enns.netlify.app"
+  "Enjoy your stay!"
   
 ];
 
