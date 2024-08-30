@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loading Screen | By ElysianNodes</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212; /* Dark background for high contrast */
+            color: #ffffff; /* White text for readability */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #2d2d2d, #121212); /* Dark gradient for depth */
+            z-index: -2;
+        }
+
+        /* Neon Title Styling */
+        .title h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #00ffff; /* Neon cyan text */
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            color: #ff00ff; /* Neon magenta text */
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        }
+
+        /* Neon Loading Indicator */
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(255, 255, 255, 0.1);
+            border-top: 8px solid #00ffff;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Info Box */
+        .info-box {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .info-box span {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="title">
+        <h1>Welcome To Our Server</h1>
+    </div>
+    <div class="subtitle">Loading up your neon adventure...</div>
+
+    <div class="loading-spinner"></div>
+
+    <div class="info-box">
+        <span id="map">Map: Loading...</span>
+        <span id="players">Players: Loading...</span>
+    </div>
+
+    <!-- jQuery (required by your existing scripts) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Existing Scripts -->
+    <script src="/theme1/js/config.js"></script>
+    <script src="/theme1/js/main.js"></script>
+</body>
+</html>
