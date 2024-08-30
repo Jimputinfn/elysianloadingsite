@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loading Screen | By ElysianNodes</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212; /* Dark background for futuristic theme */
+            color: #00bfff; /* Neon blue text */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #000000, #333333); /* Dark gradient for depth */
+            z-index: -2;
+        }
+
+        /* Digital Title Styling */
+        .title h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            border-top: 8px solid #00bfff;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Info Box */
+        .info-box {
+            font-size: 1.2rem;
+            color: #00bfff;
+            margin-top: 20px;
+        }
+
+        .info-box span {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="title">
+        <h1>Welcome To Our server</h1>
+    </div>
+    <div class="subtitle">Initializing, please wait...</div>
+
+    <div class="loading-spinner"></div>
+
+    <div class="info-box">
+        <span id="map">Map: Loading...</span>
+        <span id="players">Players: Loading...</span>
+    </div>
+
+    <!-- jQuery (required by your existing scripts) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Existing Scripts -->
+    <script src="/theme1/js/config.js"></script>
+    <script src="/theme1/js/main.js"></script>
+</body>
+</html>
