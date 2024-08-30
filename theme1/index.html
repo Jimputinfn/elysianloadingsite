@@ -1,53 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script type="text/javascript">
-      document.write(
-        '<link rel="stylesheet" href="theme1/css/main.css?' + Math.random() + '">'
-      );
-    </script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <link rel="stylesheet" href="css/main.css" /> -->
     <title>Loading Screen | By ElysianNodes</title>
-  </head>
-  <body>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212; /* Default dark mode */
+            color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Background Image */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('your-background-image.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.5);
+            z-index: -2;
+        }
+
+        /* Overhaul Layer */
+        .overhaul {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        nav span {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        /* Main Title Section */
+        main .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        main .title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        main .title h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(90deg, #8e44ad, #3498db); /* Purple to Blue gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* History Section */
+        #history {
+            margin-top: 20px;
+        }
+
+        /* Loading Box */
+        .loading-box {
+            width: 200px;
+            height: 10px;
+            background-color: #333333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .loading-box::before {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 100%;
+            background-color: #3498db; /* Loading bar color */
+            animation: loading 1.5s linear infinite;
+        }
+
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
     <div class="background"></div>
     <div class="overhaul"></div>
 
     <nav>
-      <div id="announcement"></div>
-      <span id="map">You're playing on </span>
-      <span id="steamid"></span>
+        <div id="announcement"></div>
+        <span id="map">You're playing on </span>
+        <span id="steamid"></span>
     </nav>
 
     <div id="debug"></div>
 
     <main>
-      <div class="title">
-        <h2>Welcome to,</h2>
-        <h1 id="title"></h1>
-        <div id="history"></div>
-      </div>
-      <div class="under-nav"></div>
-      <div class="loading-box"></div>
+        <div class="title">
+            <h2>Welcome to,</h2>
+            <h1 id="title">Your Server</h1>
+            <div id="history"></div>
+        </div>
+        <div class="under-nav"></div>
+        <div class="loading-box"></div>
     </main>
 
-    <script src="js/lib/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript">
-      document.write(
-        '<script src="js/config.js?' + Math.random() + '"><\/script>'
-      );
-      document.write(
-        '<script src="js/main.js?' + Math.random() + '"><\/script>'
-      );
-    </script>
-    <!-- <script src="config.js"></script> -->
-    <!-- <script src="js/main.js"></script> -->
-  </body>
+    <!-- jQuery (required by your existing scripts) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Existing Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
