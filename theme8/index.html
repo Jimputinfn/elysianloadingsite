@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loading Screen | By ElysianNodes</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff; /* Clean white background */
+            color: #333333; /* Dark gray text for readability */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Light blue gradient for a winter feel */
+            z-index: -2;
+        }
+
+        /* Modern Title Styling */
+        .title h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #ffffff; /* White text for strong contrast */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Black outline for better visibility */
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            color: #ffffff; /* Changed to white for better visibility */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Black outline for better visibility */
+        }
+
+        /* Modern Loading Indicator */
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 8px solid rgba(0, 0, 0, 0.1);
+            border-top: 8px solid #ffffff; /* White spinner for visibility */
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Info Box */
+        .info-box {
+            font-size: 1rem;
+            color: #ffffff; /* Changed to white for better visibility */
+            margin-top: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Black outline for better visibility */
+        }
+
+        .info-box span {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Snowflake Animation (Add this new CSS) */
+        @keyframes snow {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+
+        .snowflake {
+            position: absolute;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: white;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: snow linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="title">
+        <h1>Welcome</h1>
+    </div>
+    <div class="subtitle">Please wait while we prepare your experience...</div>
+
+    <div class="loading-spinner"></div>
+
+    <div class="info-box">
+        <span id="map"></span>
+        <span id="players"></span>
+    </div>
+
+    <!-- jQuery (required by your existing scripts) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Existing Scripts -->
+    <script src="/theme1/js/config.js"></script>
+    <script src="/theme1/js/main.js"></script>
+
+    <!-- Add Snowflakes in the Body (Add this new HTML) -->
+    <script>
+        for (let i = 0; i < 100; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random duration
+            snowflake.style.animationDelay = Math.random() * 5 + 's'; // Random delay
+            document.body.appendChild(snowflake);
+        }
+    </script>
+</body>
+</html>
