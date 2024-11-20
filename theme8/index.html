@@ -7,7 +7,7 @@
     <title>Loading Screen | By ElysianNodes</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet" />
 
     <!-- Stylesheet -->
     <style>
@@ -39,12 +39,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Light blue gradient for a winter feel */
-            z-index: -2;
+            background-image: url('https://img.freepik.com/premium-photo/winter-forest-snow-free-photo-hd-8k-wallpaper_1073814-2007.jpg'); /* Replace with your Christmas image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            filter: blur(5px); /* Apply blur effect */
+            z-index: -2; /* Ensure it stays behind other elements */
         }
 
         /* Modern Title Styling */
         .title h1 {
+            font-family: 'Mountains of Christmas', cursive; /* Apply Christmas-themed font */
             font-size: 4rem;
             margin-bottom: 20px;
             font-weight: 700;
@@ -53,6 +58,7 @@
         }
 
         .subtitle {
+            font-family: 'Mountains of Christmas', cursive; /* Apply Christmas-themed font */
             font-size: 1.2rem;
             margin-bottom: 30px;
             font-weight: 400;
